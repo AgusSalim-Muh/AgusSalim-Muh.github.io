@@ -3,29 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio | Agus Salim</title>
+    <title>Portofolio</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
-    <script src="assets/jquery/jquery-3.6.4.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="preload" href="assets/img/me.jpg" as="image" />
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js" defer></script>
     <style>
       section {
         padding-top: 8rem;
+      }
+      svg {
+        display: block;
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+      }
+      footer a {
+        color: #ffffff;
+        margin: 0 5px;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+      .jumbotron h1,
+      .jumbotron h3,
+      .jumbotron p {
+        animation: fadeInUp 1s ease-in-out;
+      }
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
   </head>
   <body id="home">
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="#">Muhamad Agus Salim</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand fw-bold" href="#">Your Name</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
@@ -36,14 +65,6 @@
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
-            <li class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Tugas</button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="gajah/index.html">gajah</a>
-                <a class="dropdown-item" href="kalkulator/index.html">kalkulator</a>
-                <a class="dropdown-item" href="youtube/youtube.html">youtube</a>
-              </div>
-            </li>
           </ul>
         </div>
       </div>
@@ -52,24 +73,23 @@
 
     <!-- jumbotron -->
     <section class="jumbotron p-0">
-      <div class="row justify-content-center" style="padding-top: 10rem">
-        <div class="col-md-6 text-center text-midle">
-          <br /><br /><br /><br />
-          <h3>Hello, My name is</h3>
-
-          <h1>Muhamad Agus Salim</h1>
-          <br />
-          <p>Mahasiswa | Kab Semarang</p>
-        </div>
-        <div class="col-md-6 text-center">
-          <img src="assets/img/aku.jpg" alt="" width="350" class="rounded-circle img-thumbnail" />
+      <div class="container">
+        <div class="row align-items-center" style="padding-top: 10rem">
+          <div class="col-md-6 text-center text-md-start">
+            <h3>Hello, My name is</h3>
+            <h1 class="display-4 fw-bold">Your Name</h1>
+            <p class="lead">Mahasiswa | Your Place</p>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="assets/img/me.jpg" alt="Profile Photo" width="300" class="rounded-circle img-thumbnail" />
+          </div>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
           fill-opacity="1"
-          d="M0,224L30,202.7C60,181,120,139,180,133.3C240,128,300,160,360,154.7C420,149,480,107,540,85.3C600,64,660,64,720,80C780,96,840,128,900,165.3C960,203,1020,245,1080,218.7C1140,192,1200,96,1260,58.7C1320,21,1380,43,1410,53.3L1440,64L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+          d="M0,224L30,202.7C60,181,120,139,180,133.3C240,128,300,160,360,154.7C420,149,480,107,540,85.3C600,64,660,64,720,80C780,96,840,128,900,165.3C960,203,1020,245,1080,218.7C1140,192,1200,96,1260,58.7C1320,21,1380,43,1410,53.3L1440,64L1440,320L0,320Z"
         ></path>
       </svg>
     </section>
@@ -77,30 +97,28 @@
 
     <!-- about -->
     <section id="about">
-      <div class="row">
-        <div class="col-md text-center">
-          <h3>About Me</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h3>About Me</h3>
+          </div>
         </div>
-      </div>
-      <div class="row justify-content-center text-center">
-        <div class="col-sm-4 my-4">
-          Saya adalah seorang mahasiswa kelahiran 2005 dari keluarga yang sederhana. Saya merupakan anak ke-2 dari 4 bersaudara. Saya saat ini sedang berkuliah di Institut Teknologi dan Bisnis Semarang. Saya memiliki hobi dalam berolahraga
-          serta memiliki keahlian dalam pemrograman web.
-        </div>
-        <div class="col-sm-4 my-4">
-          Untuk riwayat pendidikan saya sebagai berikut: <br />
-          2010-2011 : RA NURUL HUDA KRANDON LOR 02 <br />
-          2011-2017 : MI NURUL HUDA KRANDON LOR 02 <br />
-          2017-2020 : SMP N 2 SURUH <br />
-          2020-2023 : SMK N 1 PABELAN <br />
-          2023-sekarang : ITB Semarang
+        <div class="row justify-content-center text-center">
+          <div class="col-sm-4 my-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus laudantium fugiat earum omnis nulla, saepe pariatur ratione dicta deleniti ad voluptate exercitationem repellat dolorem natus voluptatum aut praesentium neque,
+            illo rerum quam quod, reiciendis laborum cum eius? Ut, molestiae doloribus!
+          </div>
+          <div class="col-sm-4 my-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quidem aliquid ab, quisquam soluta repudiandae enim autem quis doloremque veniam maxime! Numquam accusamus quam omnis culpa, doloremque natus quia voluptate optio
+            accusantium asperiores doloribus aut. Facilis quam excepturi consectetur dolore.
+          </div>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#e9ecef"
           fill-opacity="1"
-          d="M0,160L26.7,154.7C53.3,149,107,139,160,138.7C213.3,139,267,149,320,170.7C373.3,192,427,224,480,224C533.3,224,587,192,640,192C693.3,192,747,224,800,240C853.3,256,907,256,960,245.3C1013.3,235,1067,213,1120,186.7C1173.3,160,1227,128,1280,138.7C1333.3,149,1387,203,1413,229.3L1440,256L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
+          d="M0,160L26.7,154.7C53.3,149,107,139,160,138.7C213.3,139,267,149,320,170.7C373.3,192,427,224,480,224C533.3,224,587,192,640,192C693.3,192,747,224,800,240C853.3,256,907,256,960,245.3C1013.3,235,1067,213,1120,186.7C1173.3,160,1227,128,1280,138.7C1333.3,149,1387,203,1413,229.3L1440,256L1440,320L0,320Z"
         ></path>
       </svg>
     </section>
@@ -115,27 +133,28 @@
           </div>
         </div>
         <div class="row my-4">
+          <!-- Ulangi untuk setiap project -->
           <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="assets/img/bootstrap[.png" class="card-img-top" alt="gbr1" />
+            <div class="card h-100">
+              <img src="assets/img/project.jpg" class="card-img-top" alt="Project 1" />
               <div class="card-body">
-                <p class="card-text">Project Bootstrap</p>
+                <p class="card-text">Project 1</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="assets/img/crud.png" class="card-img-top" alt="gbr1" />
+            <div class="card h-100">
+              <img src="assets/img/project.jpg" class="card-img-top" alt="Project 2" />
               <div class="card-body">
-                <p class="card-text">Project CRUD</p>
+                <p class="card-text">Project 2</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="assets/img/postofolio.png" class="card-img-top" alt="gbr1" />
+            <div class="card h-100">
+              <img src="assets/img/project.jpg" class="card-img-top" alt="Project 3" />
               <div class="card-body">
-                <p class="card-text">Project Portofolio</p>
+                <p class="card-text">Project 3</p>
               </div>
             </div>
           </div>
@@ -145,14 +164,14 @@
         <path
           fill="#ffffff"
           fill-opacity="1"
-          d="M0,0L40,42.7C80,85,160,171,240,218.7C320,267,400,277,480,240C560,203,640,117,720,96C800,75,880,117,960,117.3C1040,117,1120,75,1200,74.7C1280,75,1360,117,1400,138.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+          d="M0,0L40,42.7C80,85,160,171,240,218.7C320,267,400,277,480,240C560,203,640,117,720,96C800,75,880,117,960,117.3C1040,117,1120,75,1200,74.7C1280,75,1360,117,1400,138.7L1440,160L1440,320L0,320Z"
         ></path>
       </svg>
     </section>
     <!-- end project -->
 
     <!-- contact -->
-    <section id="contact">
+    <section id="contact" class="mb-0 pb-0">
       <div class="container">
         <div class="row text-center">
           <div class="col">
@@ -161,19 +180,18 @@
         </div>
         <div class="row justify-content-center my-4">
           <div class="col-md-6">
-            <form action="https://formsubmit.co/your@email.com">
-              <div class="form-group">
-                <label for="exampleInputName">Name</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" name="name" />
+            <form action="https://formsubmit.co/your@email.com" method="POST">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required />
               </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" required />
               </div>
-
-              <div class="form-group">
-                <label for="exampleFormControlTextarea1pesan">Pesan</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1pesan" rows="3"></textarea>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
@@ -182,20 +200,20 @@
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#343a40"
+          fill="#212529"
           fill-opacity="1"
-          d="M0,160L48,170.7C96,181,192,203,288,197.3C384,192,480,160,576,144C672,128,768,128,864,144C960,160,1056,192,1152,192C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          d="M0,128L40,149.3C80,171,160,213,240,213.3C320,213,400,171,480,176C560,181,640,235,720,224C800,213,880,139,960,128C1040,117,1120,171,1200,176C1280,181,1360,139,1400,117.3L1440,96L1440,320L0,320Z"
         ></path>
       </svg>
     </section>
     <!-- end contact -->
 
     <!-- footer -->
-    <footer class="bg-dark text-light pb-3">
+    <footer class="bg-dark text-light pt-0 pb-3 mt-0">
       <div class="text-center">
-        <i class="fa-brands fa-instagram"></i><a href="https://www.instagram.com/kula_agussss/"> kula_agussss </a>
+        <i class="fa-brands fa-instagram"></i><a href="#"> Yours Instagram</a>
         |
-        <i class="fa-brands fa-tiktok"></i><a href="a"> muh_agus2005</a>
+        <i class="fa-brands fa-tiktok"></i><a href="#"> Yours TikTok</a>
       </div>
     </footer>
     <!-- end footer -->
